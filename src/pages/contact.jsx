@@ -135,7 +135,7 @@ const Contact = () => {
               </motion.div>
             ))}
 
-            {/* Available For Section */}
+            
             <motion.div
               className="pt-6"
               initial="hidden"

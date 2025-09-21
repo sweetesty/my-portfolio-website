@@ -39,8 +39,8 @@ const Projects = () => {
       description:
         "A personal portfolio showcasing projects, skills, and professional experience with a modern, responsive design.",
       tech: ["React", "Tailwind CSS", "Framer Motion"],
-      github: "#",
-      demo: "#",
+      github: "https://github.com/sweetesty/my-portfolio-website",
+      demo: "https://my-portfolio-website-taupe-mu.vercel.app/",
       image:
         "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500&h=300&fit=crop",
     },
@@ -54,6 +54,18 @@ const Projects = () => {
       image:
         "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop",
     },
+    {
+      title: "Real Estate Website",
+      description:
+        "Real estate platform featuring property search, filters, and Google Maps integration Implemented favorites system, image optimization (lazy loading), and mobile-first design for a smooth user experience",
+      tech: ["React", "CSS"],
+      private: "true",
+      demo: "https://tundo-esuola-co.vercel.app/find-a-service",
+      image:
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop",
+    },
+  
+
   ];
 
   return (
