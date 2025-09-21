@@ -110,7 +110,7 @@ const Projects = () => {
                     className="flex items-center gap-1 px-3 py-2 bg-black border border-pink-500 rounded-lg text-white hover:bg-pink-500 hover:text-black transition-all duration-300"
                   >
                     <Github className="w-4 h-4" />
-                    Code
+                    
                   </a>
                   <a
                     href={project.demo}
