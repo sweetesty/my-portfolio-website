@@ -54,7 +54,7 @@ const Footer = () => {
           <h3 className="text-xl font-bold text-pink-500">Follow Me</h3>
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/sweetesty"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-pink-500 transition-colors"
@@ -62,7 +62,7 @@ const Footer = () => {
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/queen-esther-ajanaku-52197b34a"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-pink-500 transition-colors"
@@ -70,7 +70,7 @@ const Footer = () => {
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="https://instagram.com/yourusername"
+              href="https://www.instagram.com/i_am_.esther?igsh=MWowenJoOGx1dDc0Nw%3D%3D&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-pink-500 transition-colors"

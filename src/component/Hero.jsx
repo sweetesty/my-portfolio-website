@@ -90,7 +90,7 @@ function Hero() {
           </motion.a>
           <motion.a
             variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/queen-esther-ajanaku-52197b34a"
             className="text-gray-300 hover:text-pink-500 transition-colors"
           >
             <Linkedin size={28} />

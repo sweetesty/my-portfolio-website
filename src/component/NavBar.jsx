@@ -21,7 +21,7 @@ const Navbar = () => {
           Esther
         </a>
 
-        {/* Desktop Nav */}
+        
         <div className="hidden md:flex items-center space-x-6">
           {navItems.map((item) => (
             <a
@@ -35,7 +35,7 @@ const Navbar = () => {
           ))}
 
           <a
-            href="/Esther_CV.pdf"
+            href="/Resume Ajanaku Queen Esther.pdf"
             download
             className="ml-4 bg-pink-500 text-black px-4 py-2 rounded-lg flex items-center gap-2 font-medium hover:bg-pink-600 shadow-md hover:shadow-pink-500/40 transition-all duration-300"
           >
@@ -43,7 +43,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
+        
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden p-2 text-white hover:text-pink-500 transition-colors"
@@ -52,7 +52,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      
       {isMenuOpen && (
         <div className="md:hidden bg-black px-6 py-4 flex flex-col space-y-4 border-t border-pink-500/30">
           {navItems.map((item) => (
