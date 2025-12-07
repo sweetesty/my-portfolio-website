@@ -1,38 +1,26 @@
-import React from 'react'
+import React from 'react';
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
-      title: "GameNova Web Store",
+      title: "Healing Hearts – Quotes & Inspiration App",
       description:
-        "An e-commerce website designed to provide an interactive gaming shopping experience with dynamic product displays and a sleek interface.",
-      tech: ["React", "Tailwind CSS", "JavaScript"],
-      github: "#",
-      demo: "#",
-      image:
-        "https://images.unsplash.com/photo-1612831663490-1a1ff3ecf9c2?w=500&h=300&fit=crop",
+        "A beautifully designed inspirational quotes platform featuring categories, favorites, search filtering, user profiles, and Supabase authentication. Built with React, Tailwind, ShadCN UI, and Framer Motion for smooth interactions.",
+      tech: ["React","Typescript", "Supabase", "ShadCN UI", "Framer Motion", "Tailwind CSS"],
+      github: "https://github.com/sweetesty/healing-hearts",
+      demo: "https://healing-hearts-two.vercel.app/",
+      image: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&h=300&fit=crop"
     },
     {
-      title: "To-Do List / Bucket List App",
+      title: "Real Estate Website",
       description:
-        "A productivity application that helps users manage tasks and bucket list goals efficiently, with offline support and user-friendly UI.",
-      tech: ["React", "Local Storage", "Tailwind CSS"],
+        "Real estate platform featuring property search, filters, and Google Maps integration. Implemented favorites system, image optimization (lazy loading), and mobile-first design for a smooth user experience.",
+      tech: ["React", "CSS"],
       github: "#",
-      demo: "#",
-      image:
-        "https://images.unsplash.com/photo-1581091870626-3b9eb2a86a40?w=500&h=300&fit=crop",
-    },
-    {
-      title: "Quiz App",
-      description:
-        "An interactive quiz application featuring multiple-choice questions, real-time score tracking, and engaging animations.",
-      tech: ["React", "Framer Motion", "JavaScript"],
-      github: "#",
-      demo: "#",
-      image:
-        "https://images.unsplash.com/photo-1590608897129-79e5dc1c83c0?w=500&h=300&fit=crop",
+      demo: "https://tundo-esuola-co.vercel.app/find-a-service",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop"
     },
     {
       title: "Portfolio Website",
@@ -41,8 +29,43 @@ const Projects = () => {
       tech: ["React", "Tailwind CSS", "Framer Motion"],
       github: "https://github.com/sweetesty/my-portfolio-website",
       demo: "https://my-portfolio-website-taupe-mu.vercel.app/",
-      image:
-        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500&h=300&fit=crop"
+    },
+    {
+      title: "Vibea – Social Media App",
+      description:
+        "A social media platform similar to Instagram, with posts, stories, profiles, and messaging. Built with React, Tailwind CSS, ShadUI, and Supabase.",
+      tech: ["React", "JavaScript","Tailwind CSS", "ShadUI", "Supabase"],
+      github: "https://github.com/sweetesty/vibea",
+      demo: "https://vibea.vercel.app/",
+      image: "../../public/vibea-logo.jpg"
+    },
+    {
+      title: "GameNova Web Store",
+      description:
+        "An e-commerce website designed to provide an interactive gaming shopping experience with dynamic product displays and a sleek interface.",
+      tech: ["React", "Tailwind CSS", "JavaScript"],
+      github: "https://github.com/sweetesty/game-website",
+      demo: "https://game-website-lemon.vercel.app/",
+      image: "../../public/game-store.png"
+    },
+    {
+      title: "To-Do List / Bucket List App",
+      description:
+        "A productivity application that helps users manage tasks and bucket list goals efficiently, with offline support and user-friendly UI.",
+      tech: ["React", "Local Storage", "Tailwind CSS"],
+      github: "https://github.com/sweetesty/todo-list-app",
+      demo: "https://todo-list-app-by-sweetesty.vercel.app/",
+      image: "https://images.unsplash.com/photo-1581091870626-3b9eb2a86a40?w=500&h=300&fit=crop"
+    },
+    {
+      title: "Quiz App",
+      description:
+        "An interactive quiz application featuring multiple-choice questions, real-time score tracking, and engaging animations.",
+      tech: ["React", "Framer Motion", "JavaScript"],
+      github: "#",
+      demo: "#",
+      image: "https://images.unsplash.com/photo-1590608897129-79e5dc1c83c0?w=500&h=300&fit=crop"
     },
     {
       title: "Relationship Tracker",
@@ -51,21 +74,8 @@ const Projects = () => {
       tech: ["React", "Local Storage", "Tailwind CSS"],
       github: "#",
       demo: "#",
-      image:
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop",
-    },
-    {
-      title: "Real Estate Website",
-      description:
-        "Real estate platform featuring property search, filters, and Google Maps integration Implemented favorites system, image optimization (lazy loading), and mobile-first design for a smooth user experience",
-      tech: ["React", "CSS"],
-      private: "true",
-      demo: "https://tundo-esuola-co.vercel.app/find-a-service",
-      image:
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop",
-    },
-  
-
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop"
+    }
   ];
 
   return (
@@ -122,7 +132,6 @@ const Projects = () => {
                     className="flex items-center gap-1 px-3 py-2 bg-black border border-pink-500 rounded-lg text-white hover:bg-pink-500 hover:text-black transition-all duration-300"
                   >
                     <Github className="w-4 h-4" />
-                    
                   </a>
                   <a
                     href={project.demo}
