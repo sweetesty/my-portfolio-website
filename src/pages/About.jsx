@@ -38,7 +38,7 @@ const About = () => {
     {
       icon: Database,
       title: "Data & Storage",
-      skills: ["MongoDB", "SQL", "Firebase", "Supabase"],
+      skills: ["MongoDB", "SQL", "Firebase", "Supabase", "PostsgreSQL"],
     },
     {
       icon: Zap,
