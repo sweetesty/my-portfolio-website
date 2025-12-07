@@ -38,7 +38,7 @@ const Projects = () => {
       tech: ["React", "JavaScript","Tailwind CSS", "ShadUI", "Supabase"],
       github: "https://github.com/sweetesty/vibea",
       demo: "https://vibea.vercel.app/",
-      image: "../../public/vibea-logo.jpg"
+      image: "/vibea-logo.jpg"
     },
     {
       title: "GameNova Web Store",
@@ -47,7 +47,7 @@ const Projects = () => {
       tech: ["React", "Tailwind CSS", "JavaScript"],
       github: "https://github.com/sweetesty/game-website",
       demo: "https://game-website-lemon.vercel.app/",
-      image: "../../public/game-store.png"
+      image: "/game-store.png"
     },
     {
       title: "To-Do List / Bucket List App",
