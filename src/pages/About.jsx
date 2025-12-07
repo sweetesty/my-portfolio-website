@@ -23,7 +23,7 @@ const About = () => {
     {
       icon: Code2,
       title: "Frontend",
-      skills: ["React", "JavaScript", "HTML5", "CSS3"],
+      skills: ["React","Typescript", "JavaScript", "HTML5", "CSS3"],
     },
     {
       icon: Palette,
@@ -33,12 +33,12 @@ const About = () => {
     {
       icon: Smartphone,
       title: "Backend & APIs",
-      skills: ["Node.js", "Express", "REST APIs"],
+      skills: ["Node.js", "Express", "REST APIs", ],
     },
     {
       icon: Database,
       title: "Data & Storage",
-      skills: ["MongoDB", "SQL", "Firebase"],
+      skills: ["MongoDB", "SQL", "Firebase", "Supabase"],
     },
     {
       icon: Zap,
