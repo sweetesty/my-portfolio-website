@@ -56,17 +56,9 @@ const Projects = () => {
       tech: ["React", "Local Storage", "Tailwind CSS"],
       github: "https://github.com/sweetesty/todo-list-app",
       demo: "https://todo-list-app-by-sweetesty.vercel.app/",
-      image: "https://images.unsplash.com/photo-1581091870626-3b9eb2a86a40?w=500&h=300&fit=crop"
+      image: "/to-do.jpg"
     },
-    {
-      title: "Quiz App",
-      description:
-        "An interactive quiz application featuring multiple-choice questions, real-time score tracking, and engaging animations.",
-      tech: ["React", "Framer Motion", "JavaScript"],
-      github: "#",
-      demo: "#",
-      image: "https://images.unsplash.com/photo-1590608897129-79e5dc1c83c0?w=500&h=300&fit=crop"
-    },
+    
     {
       title: "Relationship Tracker",
       description:
