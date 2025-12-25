@@ -68,7 +68,7 @@ const Navbar = () => {
           ))}
 
           <a
-            href="/Esther_CV.pdf"
+            href="/Resume Ajanaku Queen Esther.pdf"
             download
             className="bg-pink-500 text-black px-4 py-2 rounded-lg flex items-center gap-2 font-medium hover:bg-pink-600 shadow-md hover:shadow-pink-500/40 transition-all duration-300"
             onClick={() => setIsMenuOpen(false)}
