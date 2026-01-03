@@ -58,7 +58,27 @@ const Projects = () => {
       demo: "https://todo-list-app-by-sweetesty.vercel.app/",
       image: "/to-do.jpg"
     },
-    
+
+    {
+  title: "Foodie – Food Ordering App",
+  description:
+    "A modern food ordering application that allows users to browse restaurants, explore menus, add meals to cart, and place orders effortlessly. Features include user authentication, cart management, responsive UI, and smooth animations for a delightful user experience.",
+  tech: ["React", "Typescript", "Supabase", "Tailwind CSS", "ShadCN UI", "Framer Motion"],
+  github: "https://github.com/sweetesty/foodie",
+  demo: "https://foodie-hub-bay-ten.vercel.app/",
+  image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&h=300&fit=crop"
+},
+
+    {
+  title: "Opulent Threads – E-commerce Clothing App",
+  description:
+    "A stylish e-commerce clothing platform that allows users to browse fashion collections, view product details, add items to cart, and complete purchases seamlessly. Built with a clean, responsive UI, smooth animations, and a user-friendly shopping experience.",
+  tech: ["React", "Typescript", "Tailwind CSS", "ShadCN UI", "Framer Motion"],
+  github: "https://github.com/sweetesty/opulent-threads",
+  demo: "https://opulent-threads-ten.vercel.app/",
+  image: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=500&h=300&fit=crop"
+},
+
     {
       title: "Relationship Tracker",
       description:
