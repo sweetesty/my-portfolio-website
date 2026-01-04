@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import {Code,Zap,Layout,Database,Gauge,Users,BookOpen,Code2,Palette,Smartphone,GitBranch,} from "lucide-react";
+import {
+  Code,
+  Zap,
+  Layout,
+  Database,
+  Gauge,
+  Users,
+  BookOpen,
+  Code2,
+  Palette,
+  Smartphone,
+  GitBranch,
+} from "lucide-react";
 
 const About = () => {
   const coreSkills = [
@@ -13,17 +25,11 @@ const About = () => {
     { name: "Continuous Learning", icon: BookOpen },
   ];
 
-  const stats = [
-    { label: "Years of Experience", value: "2+" },
-    { label: "Projects Completed", value: "10+" },
-    { label: "Technologies Mastered", value: "8+" },
-  ];
-
   const skillCategories = [
     {
       icon: Code2,
       title: "Frontend",
-      skills: ["React","Typescript", "JavaScript", "HTML5", "CSS3"],
+      skills: ["React", "Typescript", "JavaScript", "HTML5", "CSS3"],
     },
     {
       icon: Palette,
@@ -33,12 +39,12 @@ const About = () => {
     {
       icon: Smartphone,
       title: "Backend & APIs",
-      skills: ["Node.js", "Express", "REST APIs", ],
+      skills: ["Node.js", "Express", "REST APIs"],
     },
     {
       icon: Database,
       title: "Data & Storage",
-      skills: ["MongoDB", "SQL", "Firebase", "Supabase", "PostsgreSQL"],
+      skills: ["MongoDB", "SQL", "Firebase", "Supabase", "PostgreSQL"],
     },
     {
       icon: Zap,
@@ -52,9 +58,38 @@ const About = () => {
     },
   ];
 
+ const codeSnippet = `
+function DeveloperStats() {
+  return (
+    <div>
+      <p>Years of Experience: 2+</p>
+      <p>Projects Completed: 10+</p>
+      <p>Technologies Mastered: 8+</p>
+    </div>
+  );
+}
+
+export default DeveloperStats;
+`;
+
+  const [typedCode, setTypedCode] = useState("");
+  const [index, setIndex] = useState(0);
+
+  // Typing effect
+  useEffect(() => {
+    if (index < codeSnippet.length) {
+      const timeout = setTimeout(() => {
+        setTypedCode((prev) => prev + codeSnippet[index]);
+        setIndex(index + 1);
+      }, 25);
+      return () => clearTimeout(timeout);
+    }
+  }, [index]);
+
   return (
     <section id="about" className="py-20 px-4 bg-black text-white">
       <div className="max-w-6xl mx-auto">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -65,28 +100,34 @@ const About = () => {
             About Me
           </h2>
           <p className="text-xl max-w-2xl mx-auto text-white/80">
-            Passionate full-stack developer dedicated to crafting exceptional web experiences.
+            Passionate full-stack developer dedicated to crafting exceptional web
+            experiences.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 items-start">
+        {/* About + Dev Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          {/* About + Core Skills */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.2 }}
-            className="space-y-6"
+            className="space-y-6 w-full"
           >
             <p className="text-lg leading-relaxed text-white/90">
-             I am <span className="font-bold text-pink-400"> Queen Esther Ajanaku</span>,  a full-stack developer passionate about building modern,
-              responsive, and user-friendly web applications. My work blends creativity with
-              functionality, turning ideas into seamless digital experiences that leave an impact.
+              I am <span className="font-bold text-pink-400">Queen Esther Ajanaku</span>, a full-stack developer passionate about
+              building modern, responsive, and user-friendly web applications. My work
+              blends creativity with functionality, turning ideas into seamless digital
+              experiences that leave an impact.
               <br />
               <br />
-              Driven by curiosity and a love for problem-solving, I continuously explore innovative
-              approaches to design and development. Beyond writing clean, efficient code, I focus on
-              crafting solutions that are not only functional but also meaningful for users.
+              Driven by curiosity and a love for problem-solving, I continuously explore
+              innovative approaches to design and development. Beyond writing clean,
+              efficient code, I focus on crafting solutions that are not only functional
+              but also meaningful for users.
             </p>
 
+            {/* Core Skills Buttons */}
             <div className="flex flex-wrap gap-3 pt-4">
               {coreSkills.map((skill, i) => {
                 const Icon = skill.icon;
@@ -104,7 +145,7 @@ const About = () => {
                   >
                     <Icon
                       className="w-4 h-4 text-pink-400 drop-shadow-[0_0_10px_rgba(236,72,153,0.85)] 
-                                 transition-shadow duration-300 animate-pulse 
+                                 animate-pulse transition-shadow duration-300 
                                  group-hover:drop-shadow-[0_0_22px_rgba(236,72,153,1)]"
                     />
                     {skill.name}
@@ -114,30 +155,23 @@ const About = () => {
             </div>
           </motion.div>
 
+          {/* Dev Stats Code Card */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.6 }}
-            className="bg-black border border-pink-500/50 p-8 rounded-2xl shadow-lg 
-                       hover:shadow-pink-500/50 hover:scale-105 transition-all duration-300"
+            className="bg-black border border-pink-500/50 p-6 md:p-8 rounded-2xl shadow-lg
+                       hover:shadow-pink-500/50 hover:scale-105 transition-all duration-300 w-full overflow-x-auto font-mono text-pink-400"
           >
-            <h3 className="text-2xl font-bold mb-6 text-pink-400">Quick Stats</h3>
-            <div className="space-y-4">
-              {stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="flex justify-between items-center p-3 rounded-lg 
-                             hover:bg-pink-500/10 hover:shadow-md hover:shadow-pink-500/40 
-                             transition-all duration-300 cursor-default"
-                >
-                  <span className="text-white/80">{stat.label}</span>
-                  <span className="font-bold text-xl text-pink-400">{stat.value}</span>
-                </div>
-              ))}
-            </div>
+            <h3 className="text-2xl font-bold mb-4 text-pink-400">Dev Stats</h3>
+            <pre className="whitespace-pre-wrap break-words text-sm md:text-base">
+              {typedCode}
+              <span className="animate-blink">|</span>
+            </pre>
           </motion.div>
         </div>
 
+        {/* Skills & Expertise Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -151,7 +185,8 @@ const About = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        {/* Skill Categories */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {skillCategories.map((category, i) => {
             const Icon = category.icon;
             return (
@@ -160,16 +195,18 @@ const About = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1 + i * 0.12 }}
-                className="group bg-gradient-to-b from-pink-900/20 to-black rounded-xl p-6 
-                           border border-pink-500/30 hover:shadow-lg hover:shadow-pink-500/40 
+                className="group bg-gradient-to-b from-pink-900/20 to-black rounded-xl p-6
+                           border border-pink-500/30 hover:shadow-lg hover:shadow-pink-500/40
                            transition-transform hover:scale-105"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-pink-500/10 rounded-lg">
                     <Icon
-                      className="w-6 h-6 text-pink-400 drop-shadow-[0_0_12px_rgba(236,72,153,0.6)] 
+                      className="w-6 h-6 text-pink-400 
+                                 drop-shadow-[0_0_12px_rgba(236,72,153,0.6)] 
+                                 animate-pulse
                                  transition-shadow duration-300 
-                                 group-hover:drop-shadow-[0_0_22px_rgba(236,72,153,0.95)]"
+                                 group-hover:drop-shadow-[0_0_22px_rgba(236,72,153,1)]"
                     />
                   </div>
                   <h4 className="text-lg font-bold text-white">{category.title}</h4>
@@ -178,9 +215,9 @@ const About = () => {
                   {category.skills.map((s) => (
                     <span
                       key={s}
-                      className="px-3 py-1 bg-pink-500/10 text-white rounded-full text-sm 
-                                 font-medium border border-pink-400/30 
-                                 hover:bg-pink-500 hover:text-black hover:scale-105 
+                      className="px-3 py-1 bg-pink-500/10 text-white rounded-full text-sm
+                                 font-medium border border-pink-400/30
+                                 hover:bg-pink-500 hover:text-black hover:scale-105
                                  transition-all duration-300 cursor-default"
                     >
                       {s}
@@ -192,6 +229,17 @@ const About = () => {
           })}
         </div>
       </div>
+       <style>
+        {`
+          .animate-blink {
+            animation: blink 1s step-end infinite;
+          }
+          @keyframes blink {
+            50% { opacity: 0; }
+          }
+        `}
+      </style>
+  
     </section>
   );
 };
