@@ -2,19 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import heroImage from "../assets/a-girl.png";
-import { SiJavascript, SiTypescript, SiReact, SiTailwindcss, SiMongodb, SiHtml5, SiCss3, SiFigma } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa6";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
-
-const techIcons = [
-  { Icon: SiJavascript },
-  { Icon: SiTypescript },
-  { Icon: SiReact },
-  { Icon: SiTailwindcss },
-  { Icon: FaNodeJs },
-  { Icon: SiFigma },
-  { Icon: SiMongodb },
-];
 
 function Hero() {
   const scrollToAbout = () => {

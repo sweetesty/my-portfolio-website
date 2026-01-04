@@ -74,8 +74,7 @@ export default DeveloperStats;
 
   const [typedCode, setTypedCode] = useState("");
   const [index, setIndex] = useState(0);
-
-  // Typing effect
+  
   useEffect(() => {
     if (index < codeSnippet.length) {
       const timeout = setTimeout(() => {
@@ -89,7 +88,6 @@ export default DeveloperStats;
   return (
     <section id="about" className="py-20 px-4 bg-black text-white">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -171,7 +169,7 @@ export default DeveloperStats;
           </motion.div>
         </div>
 
-        {/* Skills & Expertise Header */}
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -185,7 +183,7 @@ export default DeveloperStats;
           </p>
         </motion.div>
 
-        {/* Skill Categories */}
+    
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {skillCategories.map((category, i) => {
             const Icon = category.icon;
