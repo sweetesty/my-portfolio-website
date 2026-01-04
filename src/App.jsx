@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <Layout >
-      <div className="pt-16">
+      <div className="bg-black min-h-screen pt-16">
         <Routes>
           <Route path="/" element={< Hero/>}/>
           <Route path="/" element={<Home />} />
