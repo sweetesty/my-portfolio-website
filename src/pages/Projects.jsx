@@ -22,6 +22,16 @@ const Projects = () => {
       demo: "https://tundo-esuola-co.vercel.app/find-a-service",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop"
     },
+
+    {
+  title: "Cool Flow Digital – Web Design & Development",
+  description:
+    "A modern, responsive frontend website developed to showcase the Cool Flow Digital brand with engaging animations, intuitive UI, and mobile‑friendly layouts. Built with React, Tailwind CSS, and deployed on Vercel.",
+  tech: ["React", "JavaScript", "Tailwind CSS", "HTML", "CSS", "Vercel"],
+  github: "https://github.com/sweetesty/cool-flow-digital", 
+  demo: "https://cool-flow-digital.vercel.app/",
+  image: "/cool-tech.png"
+},
     {
       title: "Portfolio Website",
       description:
