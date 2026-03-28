@@ -46,8 +46,8 @@ const Projects = () => {
       description:
         "A social media platform similar to Instagram, with posts, stories, profiles, and messaging. Built with React, Tailwind CSS, ShadUI, and Supabase.",
       tech: ["React", "JavaScript","Tailwind CSS", "ShadUI", "Supabase"],
-      github: "https://github.com/sweetesty/vibea",
-      demo: "https://vibea.vercel.app/",
+      github: "https://github.com/sweetesty/vibea-social-hub",
+      demo: "https://vibea-social-hub.vercel.app/",
       image: "/vibea-logo.jpg"
     },
     {
