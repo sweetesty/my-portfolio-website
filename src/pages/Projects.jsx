@@ -4,6 +4,43 @@ import { ExternalLink, Github } from "lucide-react";
 
 const Projects = () => {
   const projects = [
+     {
+      title: "Trading Platform",
+      description: "A modern trading platform providing access to global liquidity pools with sub-millisecond execution. Features real-time market data, portfolio tracking, multiple asset classes (stocks, crypto, forex), and an intuitive interface for seamless trading experience.",
+      tech: ["React", "JavaScript"],
+      github: "https://github.com/sweetesty/trading-platform.git",
+      demo: "https://trading-platform-flax.vercel.app/",
+      image: "/trading-platform.png"
+    },
+    {
+  title: "Foodie – Food Ordering App",
+  description:
+    "A modern food ordering application that allows users to browse restaurants, explore menus, add meals to cart, and place orders effortlessly. Features include user authentication, cart management, responsive UI, and smooth animations for a delightful user experience.",
+  tech: ["React", "Typescript", "Supabase", "Tailwind CSS", "ShadCN UI", "Framer Motion"],
+  github: "https://github.com/sweetesty/foodie",
+  demo: "https://foodie-hub-bay-ten.vercel.app/",
+  image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&h=300&fit=crop"
+},
+    {
+      title: "Vibea – Social Media App",
+      description:
+        "A social media platform similar to Instagram, with posts, stories, profiles, and messaging. Built with React, Tailwind CSS, ShadUI, and Supabase.",
+      tech: ["React", "JavaScript","Tailwind CSS", "ShadUI", "Supabase"],
+      github: "https://github.com/sweetesty/vibea-social-hub",
+      demo: "https://vibea-social-hub.vercel.app/",
+      image: "/vibea-logo.jpg"
+    },
+    {
+  title: "Opulent Threads – E-commerce Clothing App",
+  description:
+    "A stylish e-commerce clothing platform that allows users to browse fashion collections, view product details, add items to cart, and complete purchases seamlessly. Built with a clean, responsive UI, smooth animations, and a user-friendly shopping experience.",
+  tech: ["React", "Typescript", "Tailwind CSS", "ShadCN UI", "Framer Motion"],
+  github: "https://github.com/sweetesty/opulent-threads",
+  demo: "https://opulent-threads-ten.vercel.app/",
+  image: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=500&h=300&fit=crop"
+},
+
+   
     {
       title: "Healing Hearts – Quotes & Inspiration App",
       description:
@@ -32,6 +69,15 @@ const Projects = () => {
   demo: "https://cool-flow-digital.vercel.app/",
   image: "/cool-tech.png"
 },
+ {
+      title: "Classmate Connect – Attendance Tracking System",
+      description: "An electronic attendance system with QR code verification features. Designed for educational institutions to track student attendance accurately and efficiently. Built with real-time synchronization and session logging for seamless attendance management.",
+      tech: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
+      github: "https://github.com/sweetesty/classmate-connect.git",
+      demo: "https://classmate-connect.vercel.app/",
+      image: "/classmate-connect.png"
+    },
+
     {
       title: "Portfolio Website",
       description:
@@ -41,15 +87,7 @@ const Projects = () => {
       demo: "https://my-portfolio-website-taupe-mu.vercel.app/",
       image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500&h=300&fit=crop"
     },
-    {
-      title: "Vibea – Social Media App",
-      description:
-        "A social media platform similar to Instagram, with posts, stories, profiles, and messaging. Built with React, Tailwind CSS, ShadUI, and Supabase.",
-      tech: ["React", "JavaScript","Tailwind CSS", "ShadUI", "Supabase"],
-      github: "https://github.com/sweetesty/vibea-social-hub",
-      demo: "https://vibea-social-hub.vercel.app/",
-      image: "/vibea-logo.jpg"
-    },
+
     {
       title: "GameNova Web Store",
       description:
@@ -69,26 +107,11 @@ const Projects = () => {
       image: "/to-do.jpg"
     },
 
-    {
-  title: "Foodie – Food Ordering App",
-  description:
-    "A modern food ordering application that allows users to browse restaurants, explore menus, add meals to cart, and place orders effortlessly. Features include user authentication, cart management, responsive UI, and smooth animations for a delightful user experience.",
-  tech: ["React", "Typescript", "Supabase", "Tailwind CSS", "ShadCN UI", "Framer Motion"],
-  github: "https://github.com/sweetesty/foodie",
-  demo: "https://foodie-hub-bay-ten.vercel.app/",
-  image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&h=300&fit=crop"
-},
+    
 
-    {
-  title: "Opulent Threads – E-commerce Clothing App",
-  description:
-    "A stylish e-commerce clothing platform that allows users to browse fashion collections, view product details, add items to cart, and complete purchases seamlessly. Built with a clean, responsive UI, smooth animations, and a user-friendly shopping experience.",
-  tech: ["React", "Typescript", "Tailwind CSS", "ShadCN UI", "Framer Motion"],
-  github: "https://github.com/sweetesty/opulent-threads",
-  demo: "https://opulent-threads-ten.vercel.app/",
-  image: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=500&h=300&fit=crop"
-},
+    
 
+   
     {
       title: "Relationship Tracker",
       description:
