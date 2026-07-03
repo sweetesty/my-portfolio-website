@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import heroImage from "../assets/a-girl.png";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Hero() {
   const scrollToAbout = () => {
@@ -44,8 +45,8 @@ function Hero() {
           I’m a{" "}
           <span className="text-pink-400">
             <Typewriter
-              words={["FullStack Developer", "Frontend Developer","React Developer", "Web Developer", "UI/UX Designer", "Creative Coder", "Animation and Motion Designer", "Backend Developer",
-                "Problem solver and bug fixer", "Tech Enthusiast", "E-commerce app builder" ]}
+              words={["Web & Mobile Developer", "Flutter Developer", "React Native Developer", "FullStack Developer", "Frontend Developer", "Android App Builder", "Web Developer", "Creative Coder", "Backend Developer",
+                "Problem solver and bug fixer", "Tech Enthusiast" ]}
               loop
               cursor
               cursorStyle="|"
@@ -63,7 +64,7 @@ function Hero() {
           transition={{ duration: 1, delay: 0.8 }}
           className="text-base md:text-xl text-gray-300 mb-10 max-w-2xl"
         >
-          I craft sleek, responsive, and interactive web experiences
+          I craft sleek, responsive, and interactive web and mobile experiences
           blending clean code with smooth animations ✨
         </motion.p>
 
@@ -74,12 +75,12 @@ function Hero() {
           transition={{ duration: 0.8, delay: 1.1 }}
           className="flex flex-wrap gap-4 justify-center mb-12"
         >
-          <a
-            href="/projects"
+          <Link
+            to="/projects"
             className="px-6 py-3 rounded-full bg-pink-500 text-white font-semibold hover:bg-pink-600 transition shadow-lg hover:shadow-pink-500/60"
           >
             View My Work
-          </a>
+          </Link>
           <a
             href="mailto:estherolukorede12@gmail.com"
             className="px-6 py-3 rounded-full border-2 border-pink-400 text-pink-400 font-semibold hover:bg-pink-500 hover:text-white transition shadow-md hover:shadow-pink-400/60"

@@ -1,6 +1,176 @@
 @import "tailwindcss";
+
 html, body, #root {
   @apply bg-black text-white min-h-screen;
   margin: 0;
   padding: 0;
+}
+
+/* Dynamic Accent Theme System */
+:root {
+  /* Default Pink theme values */
+  --accent-light: #f472b6;
+  --accent-main: #ec4899;
+  --accent-dark: #db2777;
+  --accent-deep: #831843;
+
+  /* Override Tailwind v4 color variables */
+  --color-pink-400: var(--accent-light);
+  --color-pink-500: var(--accent-main);
+  --color-pink-600: var(--accent-dark);
+  --color-pink-900: var(--accent-deep);
+}
+
+:root[data-theme="emerald"] {
+  --accent-light: #34d399;
+  --accent-main: #10b981;
+  --accent-dark: #059669;
+  --accent-deep: #064e3b;
+}
+
+:root[data-theme="indigo"] {
+  --accent-light: #818cf8;
+  --accent-main: #6366f1;
+  --accent-dark: #4f46e5;
+  --accent-deep: #1e1b4b;
+}
+
+:root[data-theme="orange"] {
+  --accent-light: #fb923c;
+  --accent-main: #f97316;
+  --accent-dark: #ea580c;
+  --accent-deep: #7c2d12;
+}
+
+:root[data-theme="mono"] {
+  /* Accent colors mapping for B&W elements */
+  --accent-light: #71717a;  /* zinc-500 */
+  --accent-main: #000000;   /* black accent */
+  --accent-dark: #18181b;   /* zinc-900 */
+  --accent-deep: #e4e4e7;   /* zinc-200 */
+}
+
+/* Scoped Black & White Light-Theme Rules */
+html[data-theme="mono"] {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+html[data-theme="mono"] body,
+html[data-theme="mono"] #root {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Backgrounds mapping */
+html[data-theme="mono"] .bg-black {
+  background-color: #ffffff !important;
+}
+html[data-theme="mono"] .bg-black\/70 {
+  background-color: rgba(244, 244, 245, 0.85) !important; /* Light card background */
+}
+html[data-theme="mono"] .bg-zinc-950 {
+  background-color: #ffffff !important;
+}
+html[data-theme="mono"] .bg-zinc-900 {
+  background-color: #f4f4f5 !important;
+}
+
+/* Hero Section Image Overlay - make it light and soft so dark text is readable */
+html[data-theme="mono"] .bg-gradient-to-b.from-black\/80 {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.4) 100%) !important;
+}
+
+/* Text colors mapping */
+html[data-theme="mono"] .text-white,
+html[data-theme="mono"] .text-gray-100 {
+  color: #000000 !important;
+}
+html[data-theme="mono"] .text-white\/80,
+html[data-theme="mono"] .text-white\/90,
+html[data-theme="mono"] .text-gray-300 {
+  color: #27272a !important; /* Zinc-800 for high readability */
+}
+html[data-theme="mono"] .text-white\/70 {
+  color: rgba(0, 0, 0, 0.75) !important;
+}
+html[data-theme="mono"] .text-white\/50 {
+  color: rgba(0, 0, 0, 0.55) !important;
+}
+html[data-theme="mono"] .text-white\/40 {
+  color: rgba(0, 0, 0, 0.45) !important;
+}
+html[data-theme="mono"] .text-white\/30 {
+  color: rgba(0, 0, 0, 0.35) !important;
+}
+html[data-theme="mono"] .text-pink-400,
+html[data-theme="mono"] .text-pink-500 {
+  color: #000000 !important;
+}
+
+/* Text Gradients */
+html[data-theme="mono"] .bg-clip-text {
+  background: none !important;
+  background-clip: unset !important;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+
+/* Borders mapping */
+html[data-theme="mono"] .border-pink-500\/50,
+html[data-theme="mono"] .border-pink-500\/40,
+html[data-theme="mono"] .border-pink-500\/30,
+html[data-theme="mono"] .border-pink-500\/10 {
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Buttons and highlights */
+html[data-theme="mono"] .bg-pink-500 {
+  background-color: #000000 !important;
+}
+html[data-theme="mono"] .bg-pink-500.text-black,
+html[data-theme="mono"] .bg-pink-500.text-white {
+  color: #ffffff !important; /* White text on black button */
+}
+html[data-theme="mono"] .border-pink-400 {
+  border-color: #000000 !important;
+}
+html[data-theme="mono"] .text-pink-400.hover\:bg-pink-500:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+html[data-theme="mono"] .hover\:text-black:hover {
+  color: #ffffff !important; /* Invert hovered text to white on black bg */
+}
+
+/* Scoped B&W Button Fixes (ensure buttons remain solid black with white text) */
+html[data-theme="mono"] a.bg-black,
+html[data-theme="mono"] button.bg-black {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.8) !important;
+}
+html[data-theme="mono"] a.bg-black svg,
+html[data-theme="mono"] button.bg-black svg {
+  stroke: #ffffff !important;
+  color: #ffffff !important;
+}
+html[data-theme="mono"] a.bg-black:hover,
+html[data-theme="mono"] button.bg-black:hover {
+  background-color: #27272a !important; /* zinc-800 on hover */
+  border-color: #27272a !important;
+}
+
+/* Forms and Inputs */
+html[data-theme="mono"] input,
+html[data-theme="mono"] textarea {
+  background-color: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.2) !important;
+  color: #000000 !important;
+}
+
+/* Hover effects */
+html[data-theme="mono"] .hover\:shadow-pink-500\/50:hover,
+html[data-theme="mono"] .hover\:shadow-pink-500\/40:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1) !important;
 }

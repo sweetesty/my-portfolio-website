@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   Code,
@@ -179,6 +180,7 @@ const ParticleBackground = () => {
 
 // ─── About Component ────────────────────────────────────────────────────────
 const About = () => {
+  const navigate = useNavigate();
   const coreSkills = [
     { name: "Problem Solving", icon: Zap },
     { name: "Clean Code", icon: Code },
@@ -196,14 +198,19 @@ const About = () => {
       skills: ["React", "Typescript", "JavaScript", "HTML5", "CSS3"],
     },
     {
+      icon: Smartphone,
+      title: "Mobile Development",
+      skills: ["Flutter", "Dart", "React Native", "Expo", "Android (APK)", "iOS (IPA)", "Cross-Platform Dev"],
+    },
+    {
       icon: Palette,
       title: "Design & Styling",
       skills: ["Tailwind CSS", "Figma", "Responsive UI"],
     },
     {
-      icon: Smartphone,
+      icon: Code,
       title: "Backend & APIs",
-      skills: ["Node.js", "Express", "REST APIs"],
+      skills: ["Node.js", "Express", "PHP", "Laravel", "REST APIs"],
     },
     {
       icon: Database,
@@ -211,14 +218,9 @@ const About = () => {
       skills: ["MongoDB", "SQL", "Firebase", "Supabase", "PostgreSQL"],
     },
     {
-      icon: Zap,
-      title: "Performance",
-      skills: ["Lazy Loading", "Optimization", "Accessibility"],
-    },
-    {
       icon: GitBranch,
-      title: "Tools",
-      skills: ["Git", "GitHub", "Deployment"],
+      title: "Tools & DevOps",
+      skills: ["Git", "GitHub", "Vercel", "EAS Build", "Deployment"],
     },
   ];
 
@@ -295,8 +297,8 @@ export default DeveloperStats;
             About Me
           </h2>
           <p className="text-xl max-w-2xl mx-auto text-white/80">
-            Passionate full-stack developer dedicated to crafting exceptional web
-            experiences.
+            Passionate web and mobile developer dedicated to crafting exceptional
+            digital experiences.
           </p>
         </motion.div>
 
@@ -314,8 +316,8 @@ export default DeveloperStats;
               <span className="font-bold text-pink-400">
                 Queen Esther Ajanaku
               </span>
-              , a full-stack developer passionate about building modern,
-              responsive, and user-friendly web applications. My work blends
+              , a web and mobile developer passionate about building modern,
+              responsive, and user-friendly applications across web and mobile platforms. My work blends
               creativity with functionality, turning ideas into seamless digital
               experiences that leave an impact.
               <br />
@@ -417,10 +419,11 @@ export default DeveloperStats;
                   {category.skills.map((s) => (
                     <span
                       key={s}
+                      onClick={() => navigate(`/projects?tech=${encodeURIComponent(s)}`)}
                       className="px-3 py-1 bg-pink-500/10 text-white rounded-full text-sm
                                  font-medium border border-pink-400/30
                                  hover:bg-pink-500 hover:text-black hover:scale-105
-                                 transition-all duration-300 cursor-default"
+                                 transition-all duration-300 cursor-pointer"
                     >
                       {s}
                     </span>
