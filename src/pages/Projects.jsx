@@ -18,6 +18,38 @@ const Projects = () => {
   }, [techFilter]);
 
   const projects = [
+    {
+      title: "Lokal Shops",
+      description:
+        "An innovative e-commerce marketplace platform connecting local businesses with customers. Features comprehensive multi-vendor onboarding, store management, and a seamless shopping experience.",
+      tech: ["React", "Supabase", "Tailwind CSS", "TypeScript"],
+      github: "#",
+      demo: "https://lokalshops.co.uk/",
+      image: "/lokal-logo.png",
+      category: "web",
+      features: [
+        "Multi-vendor onboarding and store management",
+        "Real-time product inventory and cart system",
+        "Admin dashboards with comprehensive analytics",
+        "Secure user authentication and checkout flow"
+      ]
+    },
+    {
+      title: "AutoGo - Car Rental Website",
+      description:
+        "A professional car rental and car hire website providing a seamless experience for booking vehicles. Users can browse a wide selection of cars and make reservations easily.",
+      tech: ["React", "Tailwind CSS", "JavaScript"],
+      github: "#",
+      demo: "https://www.autogo.ng/",
+      image: "/autogo.png",
+      category: "web",
+      features: [
+        "Seamless vehicle booking and reservation system",
+        "Browse a wide selection of cars for hire",
+        "Responsive and user-friendly interface",
+        "Optimized for performance and accessibility"
+      ]
+    },
      {
       title: "StudyCompanion",
       description: "A comprehensive mobile learning assistant designed to help students manage study schedules, track task deadlines, set reminders, and organize study resources in one place.",
