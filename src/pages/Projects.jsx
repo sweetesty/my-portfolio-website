@@ -19,6 +19,22 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "Dan Lami Real Estate",
+      description:
+        "Africa's luxury real estate authority platform. Features premium property listings, signature developments, and investment advisory for buyers, investors, and diaspora clients in Lekki, Lagos.",
+      tech: ["React", "Next.js", "Tailwind CSS"],
+      github: "#",
+      demo: "https://danlamirealestate.com/",
+      image: "/danlami.png",
+      category: "web",
+      features: [
+        "Premium property listings across Lekki peninsula",
+        "Strategic signature developments showcase",
+        "Investment advisory insights and guides",
+        "Seamless contact and consultation booking"
+      ]
+    },
+    {
       title: "Lokal Shops",
       description:
         "An innovative e-commerce marketplace platform connecting local businesses with customers. Features comprehensive multi-vendor onboarding, store management, and a seamless shopping experience.",
