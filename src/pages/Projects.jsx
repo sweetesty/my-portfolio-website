@@ -7,7 +7,7 @@ const Projects = () => {
   const [activeTab, setActiveTab] = useState("all");
   const [selectedProject, setSelectedProject] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
-  
+
   const techFilter = searchParams.get("tech");
 
   useEffect(() => {
@@ -18,22 +18,6 @@ const Projects = () => {
   }, [techFilter]);
 
   const projects = [
-    {
-      title: "Dan Lami Real Estate",
-      description:
-        "Africa's luxury real estate authority platform. Features premium property listings, signature developments, and investment advisory for buyers, investors, and diaspora clients in Lekki, Lagos.",
-      tech: ["React", "Next.js", "Tailwind CSS"],
-      github: "#",
-      demo: "https://danlamirealestate.com/",
-      image: "/danlami.png",
-      category: "web",
-      features: [
-        "Premium property listings across Lekki peninsula",
-        "Strategic signature developments showcase",
-        "Investment advisory insights and guides",
-        "Seamless contact and consultation booking"
-      ]
-    },
     {
       title: "Lokal Shops",
       description:
@@ -66,7 +50,23 @@ const Projects = () => {
         "Optimized for performance and accessibility"
       ]
     },
-     {
+    {
+      title: "Dan Lami Real Estate",
+      description:
+        "Africa's luxury real estate authority platform. Features premium property listings, signature developments, and investment advisory for buyers, investors, and diaspora clients in Lekki, Lagos.",
+      tech: ["React", "Next.js", "Tailwind CSS"],
+      github: "#",
+      demo: "https://danlamirealestate.com/",
+      image: "/danlami.png",
+      category: "web",
+      features: [
+        "Premium property listings across Lekki peninsula",
+        "Strategic signature developments showcase",
+        "Investment advisory insights and guides",
+        "Seamless contact and consultation booking"
+      ]
+    },
+    {
       title: "StudyCompanion",
       description: "A comprehensive mobile learning assistant designed to help students manage study schedules, track task deadlines, set reminders, and organize study resources in one place.",
       tech: ["React Native", "Expo", "JavaScript", "Tailwind CSS"],
@@ -82,7 +82,7 @@ const Projects = () => {
         "Lightweight offline support for studying on-the-go"
       ]
     },
-     {
+    {
       title: "Trading Platform",
       description: "A modern trading platform providing access to global liquidity pools with sub-millisecond execution. Features real-time market data, portfolio tracking, multiple asset classes (stocks, crypto, forex), and an intuitive interface for seamless trading experience.",
       tech: ["React", "JavaScript"],
@@ -117,7 +117,7 @@ const Projects = () => {
       title: "Vibea – Social Media App",
       description:
         "A social media platform similar to Instagram, with posts, stories, profiles, and messaging. Built with React, Tailwind CSS, ShadUI, and Supabase.",
-      tech: ["React", "JavaScript","Tailwind CSS", "ShadUI", "Supabase"],
+      tech: ["React", "JavaScript", "Tailwind CSS", "ShadUI", "Supabase"],
       github: "https://github.com/sweetesty/vibea-social-hub",
       demo: "https://vibea-social-hub.vercel.app/",
       image: "/vibea-logo.jpg",
@@ -149,7 +149,7 @@ const Projects = () => {
       title: "Healing Hearts – Quotes & Inspiration App",
       description:
         "A beautifully designed inspirational quotes platform featuring categories, favorites, search filtering, user profiles, and Supabase authentication. Built with React, Tailwind, ShadCN UI, and Framer Motion for smooth interactions.",
-      tech: ["React","Typescript", "Supabase", "ShadCN UI", "Framer Motion", "Tailwind CSS"],
+      tech: ["React", "Typescript", "Supabase", "ShadCN UI", "Framer Motion", "Tailwind CSS"],
       github: "https://github.com/sweetesty/healing-hearts",
       demo: "https://healing-hearts-two.vercel.app/",
       image: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&h=300&fit=crop",
@@ -182,7 +182,7 @@ const Projects = () => {
       description:
         "A modern, responsive frontend website developed to showcase the Cool Flow Digital brand with engaging animations, intuitive UI, and mobile‑friendly layouts. Built with React, Tailwind CSS, and deployed on Vercel.",
       tech: ["React", "JavaScript", "Tailwind CSS", "HTML", "CSS", "Vercel"],
-      github: "https://github.com/sweetesty/cool-flow-digital", 
+      github: "https://github.com/sweetesty/cool-flow-digital",
       demo: "https://cool-flow-digital.vercel.app/",
       image: "/cool-tech.png",
       category: "web",
@@ -302,8 +302,8 @@ const Projects = () => {
           <div className="flex justify-center mb-6">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-pink-500/20 border border-pink-500 text-pink-400 rounded-full text-sm font-medium">
               Tech Filter: {techFilter}
-              <button 
-                onClick={clearTechFilter} 
+              <button
+                onClick={clearTechFilter}
                 className="hover:text-white cursor-pointer ml-1 p-0.5 rounded-full hover:bg-pink-500/25 transition-colors"
                 title="Clear filter"
               >
@@ -323,11 +323,10 @@ const Projects = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-4 md:px-6 py-2 rounded-full border text-xs md:text-sm font-semibold transition-all duration-300 cursor-pointer ${
-                activeTab === tab.id
+              className={`px-4 md:px-6 py-2 rounded-full border text-xs md:text-sm font-semibold transition-all duration-300 cursor-pointer ${activeTab === tab.id
                   ? "bg-pink-500 border-pink-500 text-white shadow-lg shadow-pink-500/50"
                   : "bg-transparent border-pink-500/30 text-white/70 hover:border-pink-500 hover:text-white"
-              }`}
+                }`}
             >
               {tab.label}
             </button>
