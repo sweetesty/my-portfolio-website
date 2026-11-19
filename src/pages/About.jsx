@@ -13,6 +13,9 @@ import {
   Palette,
   Smartphone,
   GitBranch,
+  CreditCard,
+  ShieldCheck,
+  LineChart,
 } from "lucide-react";
 
 // ─── Particle Network Background ───────────────────────────────────────────
@@ -186,6 +189,8 @@ const About = () => {
     { name: "Clean Code", icon: Code },
     { name: "Responsive Design", icon: Layout },
     { name: "Scalable Backend", icon: Database },
+    { name: "Payment Integrations", icon: CreditCard },
+    { name: "Secure by Default", icon: ShieldCheck },
     { name: "Performance Optimization", icon: Gauge },
     { name: "Team Collaboration", icon: Users },
     { name: "Continuous Learning", icon: BookOpen },
@@ -195,32 +200,47 @@ const About = () => {
     {
       icon: Code2,
       title: "Frontend",
-      skills: ["React", "Typescript", "JavaScript", "HTML5", "CSS3"],
+      skills: ["React", "Next.js", "Typescript", "JavaScript", "TanStack Router", "Vite", "HTML5", "CSS3"],
     },
     {
       icon: Smartphone,
-      title: "Mobile Development",
-      skills: ["Flutter", "Dart", "React Native", "Expo", "Android (APK)", "iOS (IPA)", "Cross-Platform Dev"],
+      title: "Mobile & Messaging",
+      skills: ["React Native", "Expo", "Flutter", "Dart", "Telegram Mini Apps", "Push Notifications", "Android (APK)", "iOS (IPA)"],
     },
     {
       icon: Palette,
       title: "Design & Styling",
-      skills: ["Tailwind CSS", "Figma", "Responsive UI"],
+      skills: ["Tailwind CSS", "ShadCN UI", "Framer Motion", "Styled-Components", "Figma", "Responsive UI"],
     },
     {
       icon: Code,
       title: "Backend & APIs",
-      skills: ["Node.js", "Express", "PHP", "Laravel", "REST APIs"],
+      skills: ["Node.js", "Express", "Python", "Django", "PHP", "Laravel", "Supabase Edge Functions", "REST APIs"],
     },
     {
       icon: Database,
       title: "Data & Storage",
-      skills: ["MongoDB", "SQL", "Firebase", "Supabase", "PostgreSQL"],
+      skills: ["PostgreSQL", "MongoDB", "MySQL", "SQL", "Supabase", "Firebase", "Prisma", "Redux", "React Query"],
+    },
+    {
+      icon: CreditCard,
+      title: "Payments & Fintech",
+      skills: ["Stripe", "Paystack", "ALATPay", "USDT / TRC20", "Double-Entry Ledger", "AWS KMS", "Idempotent Webhooks"],
+    },
+    {
+      icon: ShieldCheck,
+      title: "Testing & Security",
+      skills: ["pytest", "PGlite", "Unit Testing", "Security Regression Tests", "OWASP Top 10", "Burp Suite", "Secure Code Review"],
+    },
+    {
+      icon: LineChart,
+      title: "Data & ML",
+      skills: ["pandas", "NumPy", "SciPy", "scikit-learn", "LightGBM", "Backtesting", "MetaTrader 5 API"],
     },
     {
       icon: GitBranch,
       title: "Tools & DevOps",
-      skills: ["Git", "GitHub", "Vercel", "EAS Build", "Deployment"],
+      skills: ["Git", "GitHub", "Vercel", "Cloudflare Workers", "CI/CD", "EAS Build", "Deployment"],
     },
   ];
 
@@ -228,9 +248,10 @@ const About = () => {
 function DeveloperStats() {
   return (
     <div>
-      <p>Years of Experience: 2+</p>
-      <p>Projects Completed: 10+</p>
-      <p>Technologies Mastered: 8+</p>
+      <p>Years of Experience: 4+</p>
+      <p>Production Apps Shipped: 25+</p>
+      <p>Languages: JS/TS, Python, PHP, Dart</p>
+      <p>Domains: Fintech, Commerce, Mobile</p>
     </div>
   );
 }
@@ -316,16 +337,18 @@ export default DeveloperStats;
               <span className="font-bold text-pink-400">
                 Queen Esther Ajanaku
               </span>
-              , a web and mobile developer passionate about building modern,
-              responsive, and user-friendly applications across web and mobile platforms. My work blends
-              creativity with functionality, turning ideas into seamless digital
-              experiences that leave an impact.
+              , a Full Stack & Mobile Developer with 4+ years building production
+              systems where correctness carries real consequences: money movement,
+              authentication, and live multi-user state. I have shipped Stripe
+              subscription billing with idempotent webhook handling, a double-entry
+              financial ledger settling USDT on-chain, and security fixes against
+              findings from a production audit.
               <br />
               <br />
-              Driven by curiosity and a love for problem-solving, I continuously
-              explore innovative approaches to design and development. Beyond
-              writing clean, efficient code, I focus on crafting solutions that
-              are not only functional but also meaningful for users.
+              I deliver across web, mobile and Telegram surfaces, in commerce,
+              hospitality, transport, fintech and healthcare. I own features end to
+              end and write the tests, documentation and release evidence that keep a
+              system maintainable long after launch.
             </p>
 
             {/* Core Skills Buttons */}

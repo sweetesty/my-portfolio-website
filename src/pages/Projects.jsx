@@ -21,30 +21,32 @@ const Projects = () => {
     {
       title: "Lokal Shops",
       description:
-        "An innovative e-commerce marketplace platform connecting local businesses with customers. Features comprehensive multi-vendor onboarding, store management, and a seamless shopping experience.",
-      tech: ["React", "Supabase", "Tailwind CSS", "TypeScript"],
+        "A UK local-commerce marketplace connecting independent merchants with nearby customers across storefronts, bookings, delivery, messaging and loyalty. I built the platform's Stripe subscription billing end to end, the merchant App Store, a full loyalty points system, and the security remediation and regression tests behind them.",
+      tech: ["React", "TypeScript", "Supabase", "Stripe", "Tailwind CSS", "PGlite"],
       github: "#",
       demo: "https://lokalshops.co.uk/",
       image: "/lokal-logo.png",
       category: "web",
       features: [
-        "Multi-vendor onboarding and store management",
-        "Real-time product inventory and cart system",
-        "Admin dashboards with comprehensive analytics",
-        "Secure user authentication and checkout flow"
+        "Stripe subscription billing: tiered plans, checkout, billing portal, entitlements resolver and server-side quota enforcement",
+        "Webhook hardened against duplicate and out-of-order events, closing stale states, double-subscribe races and billing-interval drift",
+        "Merchant App Store with atomic install/uninstall RPCs and install-eligibility enforced at the database boundary",
+        "Loyalty Points & Rewards with a real transaction ledger, multi-currency earn/redeem and checkout redemption",
+        "Resolved production audit findings (XSS, arbitrary-recipient abuse, over-broad grants) with automated security regression tests in CI"
       ]
     },
     {
       title: "AutoGo - Car Rental Website",
       description:
-        "A professional car rental and car hire website providing a seamless experience for booking vehicles. Users can browse a wide selection of cars and make reservations easily.",
-      tech: ["React", "Tailwind CSS", "JavaScript"],
+        "A car rental and hire platform for Abuja serving individuals and businesses, with flexible rental periods and vehicle selection. Includes separate Flutter mobile applications for customers and partner operators.",
+      tech: ["React", "Tailwind CSS", "JavaScript", "Flutter", "Dart"],
       github: "#",
       demo: "https://www.autogo.ng/",
       image: "/autogo.png",
       category: "web",
       features: [
         "Seamless vehicle booking and reservation system",
+        "Companion Flutter apps for customers and partner operators",
         "Browse a wide selection of cars for hire",
         "Responsive and user-friendly interface",
         "Optimized for performance and accessibility"
@@ -67,19 +69,52 @@ const Projects = () => {
       ]
     },
     {
-      title: "StudyCompanion",
-      description: "A comprehensive mobile learning assistant designed to help students manage study schedules, track task deadlines, set reminders, and organize study resources in one place.",
-      tech: ["React Native", "Expo", "JavaScript", "Tailwind CSS"],
-      github: "https://github.com/sweetesty/StudyCompanion",
-      demo: "https://expo.dev/accounts/sweetesty/projects/StudyCompanion/builds/862a6622-7ed8-4224-ad44-006a7b133d11",
-      apk: "https://expo.dev/accounts/sweetesty/projects/StudyCompanion/builds/862a6622-7ed8-4224-ad44-006a7b133d11",
-      image: "https://images.unsplash.com/photo-1513258496099-48168024aec0?w=500&h=300&fit=crop",
+      title: "Poker Wealth – Crypto Real-Money Poker",
+      description:
+        "A real-money poker platform on Telegram and React Native, built as four services: mobile client, real-time game server, web frontend, and a Financial Core settling USDT on the TRON blockchain.",
+      tech: ["React Native", "TypeScript", "Node.js", "Supabase", "USDT / TRC20", "AWS KMS"],
+      github: "#",
+      demo: "https://t.me/mypoker777_bot",
+      image: "https://images.unsplash.com/photo-1541278107931-e006523892df?w=500&h=300&fit=crop",
       category: "mobile",
       features: [
-        "Plan and track study sessions with interactive schedule management",
-        "Set automated study notifications and reminders for assignments",
-        "Organize learning resources and notes under subject folders",
-        "Lightweight offline support for studying on-the-go"
+        "Double-entry ledger in integer micro-units for exact, auditable balances",
+        "HD-derived deposit addresses with a confirmation-gated on-chain deposit watcher",
+        "AWS KMS withdrawal signing and idempotency keys for replay-safe money movement",
+        "Telegram bot authentication via HMAC-validated initData",
+        "Separate player-notification and ops-alerting bots"
+      ]
+    },
+    {
+      title: "Wedding RSVP System",
+      description:
+        "A full-stack guest management and event coordination platform handling invitations, RSVP tracking and real-time updates for wedding organisers.",
+      tech: ["React", "Node.js", "Tailwind CSS", "PostgreSQL"],
+      github: "#",
+      demo: "https://wedding-rsvp-rosy.vercel.app/",
+      image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=500&h=300&fit=crop",
+      category: "web",
+      features: [
+        "Guest list management with invitation dispatch",
+        "RSVP tracking with real-time status updates",
+        "Event coordination workflows for organisers",
+        "Responsive guest-facing invitation pages"
+      ]
+    },
+    {
+      title: "Vibea – Social Media App",
+      description:
+        "A social media platform similar to Instagram, with posts, stories, profiles, and messaging. Built with React, Tailwind CSS, ShadUI, and Supabase.",
+      tech: ["React", "JavaScript", "Tailwind CSS", "ShadUI", "Supabase"],
+      github: "https://github.com/sweetesty/vibea-social-hub",
+      demo: "https://vibea-social-hub.vercel.app/",
+      image: "/vibea-logo.jpg",
+      category: "web",
+      features: [
+        "Create, edit, and delete image and text posts",
+        "Responsive stories ribbon at the top of the feed",
+        "Real-time direct messaging between users",
+        "Comprehensive search filters for users and posts"
       ]
     },
     {
@@ -101,7 +136,7 @@ const Projects = () => {
       title: "Foodie – Food Ordering App",
       description:
         "A modern food ordering application that allows users to browse restaurants, explore menus, add meals to cart, and place orders effortlessly. Features include user authentication, cart management, responsive UI, and smooth animations for a delightful user experience.",
-      tech: ["React", "Typescript", "Supabase", "Tailwind CSS", "ShadCN UI", "Framer Motion"],
+      tech: ["React", "Typescript", "Supabase", "Paystack", "Tailwind CSS", "ShadCN UI", "Framer Motion"],
       github: "https://github.com/sweetesty/foodie",
       demo: "https://foodie-hub-bay-ten.vercel.app/",
       image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&h=300&fit=crop",
@@ -114,26 +149,42 @@ const Projects = () => {
       ]
     },
     {
-      title: "Vibea – Social Media App",
-      description:
-        "A social media platform similar to Instagram, with posts, stories, profiles, and messaging. Built with React, Tailwind CSS, ShadUI, and Supabase.",
-      tech: ["React", "JavaScript", "Tailwind CSS", "ShadUI", "Supabase"],
-      github: "https://github.com/sweetesty/vibea-social-hub",
-      demo: "https://vibea-social-hub.vercel.app/",
-      image: "/vibea-logo.jpg",
-      category: "web",
+      title: "StudyCompanion",
+      description: "A comprehensive mobile learning assistant designed to help students manage study schedules, track task deadlines, set reminders, and organize study resources in one place.",
+      tech: ["React Native", "Expo", "JavaScript", "Tailwind CSS"],
+      github: "https://github.com/sweetesty/StudyCompanion",
+      demo: "https://expo.dev/accounts/sweetesty/projects/StudyCompanion/builds/862a6622-7ed8-4224-ad44-006a7b133d11",
+      apk: "https://expo.dev/accounts/sweetesty/projects/StudyCompanion/builds/862a6622-7ed8-4224-ad44-006a7b133d11",
+      image: "https://images.unsplash.com/photo-1513258496099-48168024aec0?w=500&h=300&fit=crop",
+      category: "mobile",
       features: [
-        "Create, edit, and delete image and text posts",
-        "Responsive stories ribbon at the top of the feed",
-        "Real-time direct messaging between users",
-        "Comprehensive search filters for users and posts"
+        "Plan and track study sessions with interactive schedule management",
+        "Set automated study notifications and reminders for assignments",
+        "Organize learning resources and notes under subject folders",
+        "Lightweight offline support for studying on-the-go"
+      ]
+    },
+    {
+      title: "Love Meet – Telegram Mini App",
+      description:
+        "A social matching and community platform whose primary surface is a Telegram Mini App, offering matches, messaging and virtual gifts alongside a full social feed.",
+      tech: ["React", "TypeScript", "Supabase", "Telegram Mini Apps", "Tailwind CSS"],
+      github: "#",
+      demo: "https://t.me/lovemeetapp_bot",
+      image: "https://images.unsplash.com/photo-1516575334481-f85287c2c82d?w=500&h=300&fit=crop",
+      category: "mobile",
+      features: [
+        "Telegram WebApp initData authentication exchanged server-side for a Supabase session",
+        "Deep-link routing between the Telegram surface and the web app",
+        "Social feed with posts, profiles and guided onboarding",
+        "Push-notification permissions and an in-feed advertising system"
       ]
     },
     {
       title: "Opulent Threads – E-commerce Clothing App",
       description:
         "A stylish e-commerce clothing platform that allows users to browse fashion collections, view product details, add items to cart, and complete purchases seamlessly. Built with a clean, responsive UI, smooth animations, and a user-friendly shopping experience.",
-      tech: ["React", "Typescript", "Tailwind CSS", "ShadCN UI", "Framer Motion"],
+      tech: ["React", "Typescript", "Paystack", "Tailwind CSS", "ShadCN UI", "Framer Motion"],
       github: "https://github.com/sweetesty/opulent-threads",
       demo: "https://opulent-threads-ten.vercel.app/",
       image: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=500&h=300&fit=crop",

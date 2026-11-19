@@ -45,7 +45,7 @@ function Hero() {
           I’m a{" "}
           <span className="text-pink-400">
             <Typewriter
-              words={["Web & Mobile Developer", "Flutter Developer", "React Native Developer", "FullStack Developer", "Frontend Developer", "Android App Builder", "Web Developer", "Creative Coder", "Backend Developer",
+              words={["Full Stack & Mobile Developer", "Fintech & Payments Engineer", "Telegram Mini App Developer", "React Native Developer", "Flutter Developer", "Next.js Developer", "Backend & API Developer", "Python Developer",
                 "Problem solver and bug fixer", "Tech Enthusiast" ]}
               loop
               cursor
@@ -64,8 +64,8 @@ function Hero() {
           transition={{ duration: 1, delay: 0.8 }}
           className="text-base md:text-xl text-gray-300 mb-10 max-w-2xl"
         >
-          I craft sleek, responsive, and interactive web and mobile experiences
-          blending clean code with smooth animations ✨
+          4+ years building production systems where correctness counts, from Stripe
+          billing and on-chain money movement to polished web & mobile experiences ✨
         </motion.p>
 
         
